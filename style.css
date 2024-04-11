@@ -33,6 +33,10 @@
     color: #00ff88;
 }
 
+.left-login h1 >span{
+    color: #fff;
+}
+
 .right-login{
     width: 50vw;
     height: 100vh;
