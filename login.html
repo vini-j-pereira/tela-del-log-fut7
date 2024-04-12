@@ -6,31 +6,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>FutBoot7</title>
+    <link rel="stylesheet" href="login.css">
+    <title>FutBot7</title>
 </head>
 <body>
     <div class="main-login">
         <div class="left-login">
             <h1><span>FutBot7</span> <br>Entre para o nosso time.</h1>
-            <img src="image/Team lineup-amico.svg" alt="">
+            <img src="image/Fotbot7 (1).png" alt="">
         </div>
         <div class="right-login">
             <div class="card-login">
                 <h2>Login</h2>
                 <div class="textfield">
                     <label for="usuario">Usuario</label>
-                    <input type="text" name="usuario" placeholder="e-mail">
+                    <input type="text" name="usuario" placeholder="Usuario" id="login">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" placeholder="Senha" id="pass">
                 </div>
-                <button class="btn-log">Login</button>
+                <button type="submit" onclick="logar(); return false" class="btn-log">Login</button>
                 <a class="pass-esc" href="#">Esqueci minha senha.</a>
             </div>
         </div>
     </div>
     
+    <script src="login.js"></script>
 </body>
 </html>
