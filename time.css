@@ -51,13 +51,23 @@ div .perfil, p{
     color: #fff;
 }
 
-div.add-player{
-    margin-bottom: 10px;
+.titleH2{
+    color: #fff;
 }
 
-input#btnPlayer{
+div.add-player{
+    margin-bottom: 10px;
+    border: 1px solid #2f2841;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #2f2841;
+}
+
+input#btnPlayer,
+#btnRemove{
     border: none;
     padding: 1px 5px;
+    margin: 3px;
     border-radius: 2px;
     background-color: #00ff88;
     cursor: pointer;
@@ -65,5 +75,9 @@ input#btnPlayer{
 }
 
 input#btnPlayer:hover{
+    transform: scale(1.05);
+}
+
+input#btnRemove:hover{
     transform: scale(1.05);
 }
