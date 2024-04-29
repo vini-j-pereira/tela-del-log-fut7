@@ -81,3 +81,29 @@ input#btnPlayer:hover{
 input#btnRemove:hover{
     transform: scale(1.05);
 }
+
+.tabela{
+    display: flex;
+    flex-direction: column;
+}
+
+.nome_time{
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+table{
+    border: 1px solid #2f2841;
+    border-radius: 5px;
+    background-color: #2f2841;
+    color: #00ff88;
+    
+}
+
+#tbody{
+    color: #fff;
+}
+
+.center{
+    text-align: center;
+}
