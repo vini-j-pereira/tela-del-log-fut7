@@ -30,10 +30,11 @@
             <section class="sec-player">
                 <h2 class="titleH2">Time</h2>
                 <div class="add-player">
-                    <input type="number" name="innumber" placeholder="Numero do Jogador" id="innumber">
-                    <input type="text" name="inplayer" placeholder="Nome do Jogador" id="inplayer">
-                    <input type="button" value="Adicionar" id="btnPlayer">
-                    <input type="button" value="Remover" id="btnRemove">
+                    <input type="number" name="innumber" placeholder="Numero do Jogador" id="numPlayer">
+                    <input type="text" name="player" placeholder="Nome do Jogador" id="player">
+
+                    <input type="button" value="Adicionar" id="btnPlayer" onclick="time.adicionar()">
+                    <input type="button" value="Remover" id="btnRemove" onclick="time.remover()">
                 </div>
                 <div class="tabela">
                     <table>
@@ -46,98 +47,7 @@
                             <th>Editar</th>
                         </thead>
                         <tbody id="tbody">
-                            <tr class="center">
-                            <td>14</td>
-                            <td>André</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>5</td>
-                            <td>Arthur</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>99</td>
-                            <td>Danilo</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            </tr>
-                            <tr class="center">
-                            <td>3</td>
-                            <td>Edmar</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            </tr>
-                            <tr class="center">
-                            <td>23</td>
-                            <td>João</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>21</td>
-                            <td>Kaio</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>9</td>
-                            <td>Kevin</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>8</td>
-                            <td>Rodolpho</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
-                            <tr class="center">
-                            <td>10</td>
-                            <td>Theo</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-trash3-fill"></i>
-                            </td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -145,4 +55,5 @@
             </section>
         </main>
     </section>
+    <script src="time.js"></script>
     </body>
