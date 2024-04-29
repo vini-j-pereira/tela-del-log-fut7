@@ -14,6 +14,7 @@ class Time {
         }
 
         this.listaTabela();
+        this.remover();
     }
 
     listaTabela() {
@@ -29,6 +30,7 @@ class Time {
             let td_gols = tr.insertCell();
             let td_edit = tr.insertCell();
 
+            
             td_numeroPlayer.innerText = this.arrayPlayers[i].numPlayer;
             td_namePlayer.innerText = this.arrayPlayers[i].nomePlayer;
 
@@ -39,14 +41,17 @@ class Time {
             td_edit.classList.add('center');
 
             let iconEdit = document.createElement('i');
+            iconEdit.classList.add('micon')
             iconEdit.innerHTML = '<i class="bi bi-pencil-square"></i>';
 
             let iconDel =document.createElement('i');
             iconDel.innerHTML = '<i class="bi bi-trash3-fill"></i>';
-            
+            iconDel.setAttribute("onclick", "time.deletar("+ this.arrayPlayers[i].id +")");     
 
             td_edit.appendChild(iconEdit);
             td_edit.appendChild(iconDel);
+
+            console.log('this.arrayPlayers');
 
         }
     }
@@ -87,7 +92,22 @@ class Time {
     }
 
     remover() {
-        
+        document.getElementById('player').value = '';
+        document.getElementById('numPlayer').value = '';
+
+    }
+
+    deletar(id) {
+
+        let tbody = document.getElementById('tbody');
+
+        for(let i = 0; i < this.arrayPlayers.length; i++ ) {
+            if(this.arrayPlayers[i].id == id) {
+                this.arrayPlayers.splice(i, 1);
+                tbody.deleteRow(i);
+            }
+        }
+
     }
 }
 
