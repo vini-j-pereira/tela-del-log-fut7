@@ -3,6 +3,7 @@ class Time {
     constructor() {
        this.id = 1;
        this.arrayPlayers = [];
+       this.editId = null;
        
     }
 
@@ -10,11 +11,18 @@ class Time {
         let player = this.lerDados();
 
         if(this.validaCampos(player)) {
-            this.salvar(player);
+            if(this.editId == null) {
+                this.salvar(player);
+            } else {
+                this.atualizar(this.editId, player);
+            }
+            
         }
 
         this.listaTabela();
         this.remover();
+
+
     }
 
     listaTabela() {
@@ -43,6 +51,7 @@ class Time {
             let iconEdit = document.createElement('i');
             iconEdit.classList.add('micon')
             iconEdit.innerHTML = '<i class="bi bi-pencil-square"></i>';
+            iconEdit.setAttribute("onclick", "time.preparaEditar("+ JSON.stringify(this.arrayPlayers[i]) +")");
 
             let iconDel =document.createElement('i');
             iconDel.innerHTML = '<i class="bi bi-trash3-fill"></i>';
@@ -59,6 +68,24 @@ class Time {
     salvar(player) {
         this.arrayPlayers.push(player);
         this.id++;
+    }
+
+    atualizar(id, player) {
+        for(let i = 0; i < this.arrayPlayers.length; i++) {
+            if(this.arrayPlayers[i].id == id) {
+                this.arrayPlayers[i].nomePlayer = player.nomePlayer;
+                this.arrayPlayers[i].numPlayer = player.numPlayer;
+            }
+        }
+    }
+
+    preparaEditar(dados) {
+        this.editId = dados.id;
+
+        document.getElementById('player').value = dados.nomePlayer;
+        document.getElementById('numPlayer').value = dados.numPlayer;
+
+        document.getElementById('btnPlayer').value = 'Atualizar';
     }
 
     lerDados() {
@@ -95,16 +122,20 @@ class Time {
         document.getElementById('player').value = '';
         document.getElementById('numPlayer').value = '';
 
+        document.getElementById('btnPlayer').value = 'Adicionar';
+        this.editId = null;
+
     }
 
     deletar(id) {
+        if(confirm('Deseja deletar este jogador?')) {
+            let tbody = document.getElementById('tbody');
 
-        let tbody = document.getElementById('tbody');
-
-        for(let i = 0; i < this.arrayPlayers.length; i++ ) {
-            if(this.arrayPlayers[i].id == id) {
-                this.arrayPlayers.splice(i, 1);
-                tbody.deleteRow(i);
+            for(let i = 0; i < this.arrayPlayers.length; i++ ) {
+                if(this.arrayPlayers[i].id == id) {
+                    this.arrayPlayers.splice(i, 1);
+                    tbody.deleteRow(i);
+                }
             }
         }
 
