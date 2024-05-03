@@ -8,6 +8,9 @@
 
 body{
     background-color:#201b2c ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.nav{
@@ -73,6 +76,7 @@ input#btnPlayer,
     background-color: #00ff88;
     cursor: pointer;
     transition: 0.2s;
+    font-weight: 600;
 }
 
 input#btnPlayer:hover{
@@ -111,4 +115,33 @@ table{
 
 .micon{
     margin: 0 5px 0 0 ;
+}
+
+.escalar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    background-color: #2f2841;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.title-escalar{
+    color: #fff;
+}
+
+.btn-jogar{
+    background-color: #00ff88;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: .2s;
+    font-weight: 600;
+
+}
+
+button.btn-jogar:hover{
+    transform: scale(1.05);
 }
