@@ -29,7 +29,7 @@ class Time {
         let tbody = document.getElementById('tbody');
         tbody.innerText = '';
 
-        for(let i = 0; i < this.arrayPlayers.length; i++) {
+            for(let i = 0; i < this.arrayPlayers.length; i++) {
             let tr = tbody.insertRow();
 
             let td_numeroPlayer = tr.insertCell();
@@ -59,10 +59,8 @@ class Time {
 
             td_edit.appendChild(iconEdit);
             td_edit.appendChild(iconDel);
-
-            console.log('this.arrayPlayers');
-
         }
+
     }
 
     salvar(player) {
