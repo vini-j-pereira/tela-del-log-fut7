@@ -159,3 +159,26 @@ h2{
     background-color: #00ff88;
 }
 
+footer{
+    background-color: #2f2841;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    gap: 250px
+}
+
+footer .footer-icons i{
+    color: #00ff88;
+    font-size: 35px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .footer-icons i:hover{
+    color: #fff;
+}
+
