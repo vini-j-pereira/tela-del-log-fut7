@@ -40,7 +40,7 @@ nav ul a{
 main{
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .perfil{
@@ -123,7 +123,8 @@ table{
     justify-content: center;
     margin-top: 0;
     background-color: #2f2841;
-    padding: 20px;
+    width: 400px;
+    padding: 20px 0;
     border-radius: 5px;
     gap: 10px;
 }
@@ -144,4 +145,24 @@ table{
 
 button.btn-jogar:hover{
     transform: scale(1.05);
+}
+
+.escalar{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-escalar{
+    display: flex;
+    gap: 20px;
+}
+
+.tabela-jodo{
+    gap: 10px;
+    width: 100%;
+    border-spacing: 2px;
+}
+
+.tabela-jodo th{
+    padding: 8px;
 }
